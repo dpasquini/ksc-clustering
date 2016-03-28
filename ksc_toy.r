@@ -11,8 +11,6 @@ ksc_toy <- function(A, K){
 	cent <- matrix(0, nrow = K, ncol = ncol(A))
 	D <- matrix(0,nrow = m, ncol=K)
 	for(iter in 1:100) {
-	  print("iter is")
-	  print(iter)
 		prev_mem <- mem
 		for(k in 1:K) {
 			cent[k, ] = ksc_center(mem, A, k, cent[k, ])
